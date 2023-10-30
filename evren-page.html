@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="icon" type="image/png" href=""/>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
@@ -32,7 +32,7 @@
     <div class="main-contents">
       <div class="evren-logo top">
         <a href="index.html">
-          <img src="logo-1.png">
+          <img src="assets/img/logo-1.png">
         </a>
       </div>
       <div class="evren-bottom">
@@ -43,46 +43,46 @@
       </div>
     </div>
     <div class="evren-content" >
-
+      <!--- User Açıklaması --->
       <div class="evren-user-content">
         <div class="user-img">
-          <img src="user.png">
+          <img src="assets/img/logo-1.png">
         </div>
         <div class="user-text">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
         </div>
       </div>
+
       <div class="evren-hr"></div>
+      <!--- Ai Açıklaması --->
       <div class="evren-user-content">
         <div class="ai-img">
-          <img src="favicon.png">
+          <img src="assets/img/favicon.png">
         </div>
         <div class="user-text" id="content-to-hide">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>The Snow Dashboard UI Kit is a modern and clean user interface kit for building dashboard and admin panel interfaces.
+            It comes with a collection of UI elements, widgets, forms, charts, and maps that can be combined to create a complete and professional-looking dashboard.
+            The kit is designed with a simple, clean, and minimalist aesthetic that can be easily customized to fit the branding of any project. It is also built with HTML, CSS, and JavaScript, making it fully responsive and easy to use with any modern web development framework.
+          </p>
         </div>
-        <div id="content-to-reveal" x-ref="textToCopy"></div>
-
-        <div class="evren-text-copy" x-data="{ buttonText: '<i class=\'fa-solid fa-copy\'></i>' }">
-          <button id="text-copy" @click="buttonText = '<i class=\'fa-solid fa-check\'></i>'"><span x-html="buttonText"></span></button>
-        </div>
-
+        <div id="content-to-reveal"></div>
       </div>
     </div>
+
+    <div class="bottom-btn evren-btn" data-html2canvas-ignore="true">
+      <a href="" class="btm-btn" id="downloadSS" download>
+        <div class="btn-icon"><img src="assets/img/icon.png" alt="Instagram Icon"></div>
+        <p class="share-color">Paylaşmak İçin İndir</p>
+      </a>
+    </div>
+
   </section>
 </main>
 
 
 <script>
-  document.getElementById('text-copy').addEventListener('click', function() {
-    const content = document.getElementById('content-to-reveal').innerText;
-    const el = document.createElement('textarea');
-    el.value = content;
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
-  });
 
   const hiddenContent = document.querySelector("#content-to-hide");
   const paragraphs = hiddenContent.querySelectorAll("p");
