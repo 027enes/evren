@@ -313,4 +313,25 @@ textarea{
 .evren-btn{
     margin-bottom: 10px;
 }
+.button-row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+.button-content{
+    margin: 0 auto;
+    width: 90%;
+    height: 100px;
+    border-radius:10px;
+    z-index: 99;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1C1C1C0D;
+    font-size: 22px;
+    color: #000;
+    font-weight: 500;
+}
 /*evren-sana-nediyor*/
