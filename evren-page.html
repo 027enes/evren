@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/png" href=""/>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body>
+<main class="main-content">
+  <div class="bg-img niyet-svg">
+    <svg width="315" height="360" viewBox="0 0 315 360" fill="none" xmlns="http://www.w3.org/2000/svg" >
+      <path
+              d="M509.388 262.681C475.312 296.793 434.465 320.034 391.158 332.405C367.306 339.245 342.756 342.787 318.136 343.031C316.304 343.066 314.437 343.066 312.57 343.031C287.951 342.787 263.366 339.28 239.549 332.405C196.242 320.034 155.413 296.793 121.301 262.681C87.2943 228.657 44.3189 209.027 0 203.81C16.6807 242.807 40.9689 279.327 72.7773 311.17C104.603 342.996 141.157 367.284 180.155 383.982C202.803 393.701 226.288 400.855 250.158 405.444C255.654 406.508 261.168 407.45 266.699 408.218C281.704 410.364 296.832 411.516 311.96 411.621C314.246 411.673 316.479 411.673 318.73 411.621C333.858 411.516 348.95 410.364 363.956 408.218C369.505 407.45 375.018 406.508 380.532 405.444C404.401 400.855 427.904 393.701 450.535 383.947C489.532 367.267 526.086 342.996 557.895 311.17C589.721 279.344 613.991 242.807 630.672 203.81C586.318 209.045 543.378 228.639 509.371 262.681H509.388Z"
+              fill="#FBFBFB"/>
+      <path
+              d="M169.808 214.157C203.815 248.182 246.79 267.811 291.126 273.028C307.214 274.93 323.458 274.93 339.563 273.028C383.882 267.811 426.857 248.199 460.882 214.157C494.993 180.046 535.823 156.804 579.13 144.433C585.969 120.616 589.511 96.0316 589.756 71.4119C565.851 76.0008 542.383 83.1546 519.718 92.8734C480.721 109.554 444.201 133.825 412.358 165.651C358.791 219.217 271.881 219.217 218.314 165.651C186.489 133.825 149.934 109.537 110.937 92.8385C88.2889 83.1198 64.8034 75.9834 40.934 71.4119C41.1783 96.0316 44.7203 120.616 51.5601 144.433C94.867 156.804 135.731 180.046 169.808 214.157Z"
+              fill="#FBFBFB"/>
+      <path
+              d="M363.869 117.127C390.687 90.3434 390.652 46.8969 363.869 20.1136C337.086 -6.70454 293.639 -6.70454 266.856 20.1136C240.073 46.8969 240.038 90.3434 266.856 117.127C293.604 143.91 337.086 143.91 363.869 117.127Z"
+              fill="#FBFBFB"/>
+    </svg>
+  </div>
+  <section id="evren">
+    <div class="main-contents">
+      <div class="evren-logo top">
+        <a href="evren.html">
+          <img src="logo-1.png">
+        </a>
+      </div>
+      <div class="evren-bottom">
+        <div class="title text-color">
+          <h2 class="title-name ">Enes <br/><span class="title-surname">İnan</span></h2>
+          <p class="date">30 Ekim Pazartesi</p>
+        </div>
+      </div>
+    </div>
+    <div class="evren-content" >
+
+      <div class="evren-user-content">
+        <div class="user-img">
+          <img src="user.png">
+        </div>
+        <div class="user-text">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="evren-hr"></div>
+      <div class="evren-user-content">
+        <div class="ai-img">
+          <img src="favicon.png">
+        </div>
+        <div class="user-text" id="content-to-hide">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div id="content-to-reveal" x-ref="textToCopy"></div>
+
+        <div class="evren-text-copy" x-data="{ buttonText: '<i class=\'fa-solid fa-copy\'></i>' }">
+          <button id="text-copy" @click="buttonText = '<i class=\'fa-solid fa-check\'></i>'"><span x-html="buttonText"></span></button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<script>
+  document.getElementById('text-copy').addEventListener('click', function() {
+    const content = document.getElementById('content-to-reveal').innerText;
+    const el = document.createElement('textarea');
+    el.value = content;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  });
+
+  const hiddenContent = document.querySelector("#content-to-hide");
+  const paragraphs = hiddenContent.querySelectorAll("p");
+  const revealedContent = document.querySelector("#content-to-reveal");
+
+  let i = 0;
+  let speed = 50;
+
+  function type() {
+    if (i < paragraphs.length) {
+      const paragraph = document.createElement("p");
+      revealedContent.appendChild(paragraph);
+
+      const text = paragraphs[i].innerText;
+      const letters = text.split("");
+
+      let j = 0;
+
+      const intervalId = setInterval(() => {
+        if (j < letters.length) {
+          paragraph.innerHTML += letters[j];
+          j++;
+        } else {
+          clearInterval(intervalId);
+          i++;
+          type();
+        }
+      }, speed);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Başlangıçta 'hiddenContent' gösterilir ve 'revealedContent' gizlenir
+    hiddenContent.style.display = "block";
+    revealedContent.style.display = "none";
+
+    type();  // Yazma efektini başlat
+
+    setTimeout(() => {
+      hiddenContent.style.display = "none";   // Gizle
+      revealedContent.style.display = "block";  // Göster
+    }, 20);
+  });
+
+
+</script>
+</body>
+</html>

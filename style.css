@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+a,li{
+    text-decoration: none;
+    list-style: none;
+}
+.home-title {
+    font-weight: 900 !important;
+    font-size: 22px;
+    color: #073e05;
+    margin-bottom: -30px !important;
+}
+.h-main-content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+    position: relative;
+    justify-content: space-between;
+}
+.main-content{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+    position: relative;
+    justify-content: space-between;
+}
+.login-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 60px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    z-index: 2;
+}
+.logo img{
+    height: 150px;
+}
+.login-form{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.login-form .login-input{
+    border: 1px solid #242424;
+    padding: 7px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    width: 100%;
+    border-radius: 4px;
+}
+.login-form .login-input input{
+    border: none;
+    outline: none ;
+    background: transparent;
+    width: 100%;
+    padding: 10px 0;
+}
+.submit-btn{
+    border: 1px solid #242424;
+    width: 120px;
+    margin: 0 auto;
+    padding: 10px 0;
+    background: transparent;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #242424
+}
+#niyet{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main-logo{
+    padding: 70px;
+}
+.main-logo img{
+    height: 160px;
+}
+.top{
+    height: 30vh;
+}
+.bottom{
+    min-height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    z-index: 2;
+    gap: 50px;
+}
+.bottom h2 {
+    position: relative;
+    z-index: 9;
+}
+.bottom-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    position: relative;
+    background: #fff;
+    z-index: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 1px;
+}
+.bottom-btn:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #FF1B90, #F80261,#ED00C0, #C500E9, #7017FF, #FF1B90, #F80261,#ED00C0, #C500E9, #7017FF);
+    background-size: 400%;
+    opacity: 1;
+    transition: .5s;
+    animation:  animate 20s linear infinite;
+}
+@keyframes animate {
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 300% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.btm-btn{
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 17px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.btn-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg-img{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: -10px;
+}
+.miova-logo{
+    z-index: 99999;
+    position: absolute;
+    bottom: 15px;
+    display: block;
+}
+@media only screen and (min-width: 600px) {
+    .logo img{
+        min-height: 200px;
+    }
+    .main-logo img{
+        max-height: 160px;
+    }
+    .bottom{
+        position: relative;
+        top: 50px;
+        justify-content: start;
+        gap: 50px;
+    }
+}
+@media only screen and (max-width: 600px){
+    .login-form {
+        width: 80%;
+    }
+    .login-form .login-input{
+        padding: 5px 12px;
+    }
+}
+
+/*evren-sana-nediyor*/
+textarea{
+    border: none;
+    width: 100%;
+    outline:  none;
+}
+.textarea-input{
+    padding: 5px !important;
+}
+#evren{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+.main-contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.title-name{
+    text-align: center;
+}
+.main-contents{
+    position: relative;
+    padding: 15px 0 ;
+}
+.evren-logo{
+    height: auto;
+}
+.evren-logo img{
+    height: 160px !important;
+}
+.evren-content{
+    border: 1px solid #000;
+    padding: 10px;
+    width: 90%;
+    z-index: 9;
+    margin-bottom: 10px;
+}
+.evren-user-content{
+    display: flex;
+    align-items: start;
+    gap: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.ai-img img{
+    height: 25px;
+}
+.evren-text-copy{
+    position: absolute;
+    right: 5px;
+}
+.evren-text-copy button{
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 20px;
+    color: #FBFBFB;
+}
+#content-to-hide{
+    display: none;
+}
+#content-to-reveal{
+    width: 80%;
+}
+.evren-hr{
+    width: 100%;
+    height: 1px;
+    background: #000;
+    margin: 10px 0;
+    z-index: 9;
+    position: relative;
+}
+.evren-login-content{
+    gap: 40px;
+}
+/*evren-sana-nediyor*/

@@ -1,0 +1,50 @@
+.title-name{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.3;
+}
+.title-surname{
+    font-weight: 700;
+    font-size: 38px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+/*Anasayfa Svg*/
+.h-bg-color path{
+    fill: #FBFBFB;
+}
+.date{
+    font-weight: 500;
+    margin: 5px 0;
+}
+.paragraph-text{
+    font-size: 18px;
+    font-weight: 500;
+}
+.share-color{
+    color: #5E227F;
+    font-weight: 500;
+}
+ .niyet-title{
+     font-weight: 500;
+     font-size: 28px;
+     line-height: 1.3;
+     color: #242424;
+ }
+.text-color {
+    color: #242424;
+}
+
+.niyet-svg path {
+    fill: #eddbdb;
+}
+
+#niyet {
+    background: #ffcbcb;
+}
+#evren {
+    background: #ffcbcb;
+}
+.tag-icon img {
+    max-height: 80px;
+}
